@@ -1,0 +1,79 @@
+<%- include('../partials/header') %>
+
+<section class="my-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-5">
+        <div class="card border-0 shadow-lg">
+          <div class="card-header bg-primary text-white text-center py-3">
+            <h4 class="mb-0 fw-bold">Giriş Yap</h4>
+          </div>
+          <div class="card-body p-4 p-md-5">
+            <% if (error) { %>
+              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <i class="fas fa-exclamation-circle me-2"></i> <%= error %>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Kapat"></button>
+              </div>
+            <% } %>
+            
+            <% if (req && req.query && req.query.registered) { %>
+              <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <i class="fas fa-check-circle me-2"></i> Kaydınız başarıyla tamamlandı! Şimdi giriş yapabilirsiniz.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Kapat"></button>
+              </div>
+            <% } %>
+            
+            <form action="/auth/login" method="POST">
+              <div class="mb-4">
+                <label for="email" class="form-label">Email</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Email adresiniz" required>
+                </div>
+              </div>
+              
+              <div class="mb-4">
+                <label for="password" class="form-label">Şifre</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                  <input type="password" class="form-control" id="password" name="password" placeholder="Şifreniz" required>
+                </div>
+              </div>
+              
+              <div class="mb-4 form-check">
+                <input type="checkbox" class="form-check-input" id="rememberMe" name="rememberMe">
+                <label class="form-check-label" for="rememberMe">Beni hatırla</label>
+                <a href="/auth/forgot-password" class="float-end text-decoration-none">Şifremi unuttum</a>
+              </div>
+              
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary btn-lg">Giriş Yap</button>
+              </div>
+              
+              <hr class="my-4">
+              
+              <div class="text-center">
+                <p class="mb-2">Sosyal medya ile giriş yap</p>
+                <div class="d-flex justify-content-center gap-2">
+                  <button type="button" class="btn btn-outline-primary">
+                    <i class="fab fa-google"></i>
+                  </button>
+                  <button type="button" class="btn btn-outline-primary">
+                    <i class="fab fa-facebook-f"></i>
+                  </button>
+                  <button type="button" class="btn btn-outline-primary">
+                    <i class="fab fa-discord"></i>
+                  </button>
+                </div>
+                
+                <p class="mt-4 mb-0">Hesabınız yok mu? <a href="/auth/register" class="text-decoration-none">Hemen Kaydolun</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/footer') %> 

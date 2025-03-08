@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Örnek Eklenti",
+    "description": "Bu bir örnek eklentidir. Yeni eklentiler için bir şablon olarak kullanılabilir.",
+    "image": "/images/plugins/ornek-eklenti.png",
+    "komutlar": {
+      "kullanim": "/ornek help - Yardım komutlarını gösterir",
+      "kurulum": "/ornek kur - Eklentiyi kurar",
+      "ayarlar": "/ornek ayarlar - Ayarları açar"
+    }
+  },
+  {
+    "name": "EssentialsX",
+    "description": "Sunucunuz için temel komutlar ve özellikler.",
+    "image": "/images/plugins/essentialsx.png",
+    "komutlar": {
+      "teleport": "/tp <oyuncu> - Oyuncuya ışınlanır",
+      "home": "/home - Evinize ışınlanır",
+      "warp": "/warp <isim> - Belirlenen konuma ışınlanır",
+      "ekonomi": "/bal - Bakiyenizi gösterir"
+    }
+  },
+  {
+    "name": "WorldEdit",
+    "description": "Güçlü dünya düzenleme aracı.",
+    "image": "/images/plugins/worldedit.png",
+    "komutlar": {
+      "secim": "//wand - Seçim aracını alır",
+      "doldur": "//set <blok> - Seçili alanı blokla doldurur",
+      "kopyala": "//copy - Seçili alanı kopyalar",
+      "yapistir": "//paste - Kopyalanan alanı yapıştırır"
+    }
+  }
+] 

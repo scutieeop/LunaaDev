@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title || 'LunaDevs - Premium Minecraft Eklentileri' %></title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Minecraft&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <!-- Meta Tags -->
+  <meta name="description" content="LunaDevs - Minecraft sunucunuz için yüksek kaliteli eklentiler ve özel çözümler.">
+  <meta name="keywords" content="minecraft, plugin, eklenti, sunucu, server, minecraft plugin">
+  <meta name="author" content="LunaDevs">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="LunaDevs - Premium Minecraft Eklentileri">
+  <meta property="og:description" content="Minecraft sunucunuz için en kaliteli eklentiler ve özel çözümler.">
+  <meta property="og:image" content="/images/og-image.jpg">
+  <meta property="og:url" content="https://lunadevs.com">
+  <meta property="og:type" content="website">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="/">
+        <div class="placeholder-image logo d-inline-block me-2" data-content="LD">
+          <i class="fas fa-moon"></i>
+        </div>
+        <span>LunaDevs</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item <%= path === '/' ? 'active' : '' %>">
+            <a class="nav-link" href="/"><i class="fas fa-home me-1"></i> Ana Sayfa</a>
+          </li>
+          <li class="nav-item <%= path === '/plugins' || path.startsWith('/plugins/') ? 'active' : '' %>">
+            <a class="nav-link" href="/plugins"><i class="fas fa-puzzle-piece me-1"></i> Eklentiler</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              <i class="fas fa-th-list me-1"></i> Kategoriler
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end animate slideIn" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/plugins/category/admin"><i class="fas fa-shield-alt me-2 text-primary"></i>Admin Araçları</a></li>
+              <li><a class="dropdown-item" href="/plugins/category/economy"><i class="fas fa-coins me-2 text-warning"></i>Ekonomi</a></li>
+              <li><a class="dropdown-item" href="/plugins/category/gameplay"><i class="fas fa-gamepad me-2 text-success"></i>Oynanış</a></li>
+              <li><a class="dropdown-item" href="/plugins/category/world"><i class="fas fa-globe-americas me-2 text-info"></i>Dünya Yönetimi</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/plugins"><i class="fas fa-th me-2 text-primary"></i>Tüm Eklentiler</a></li>
+            </ul>
+          </li>
+          <li class="nav-item <%= path === '/about' ? 'active' : '' %>">
+            <a class="nav-link" href="/about"><i class="fas fa-info-circle me-1"></i> Hakkımızda</a>
+          </li>
+          <li class="nav-item <%= path === '/contact' ? 'active' : '' %>">
+            <a class="nav-link" href="/contact"><i class="fas fa-envelope me-1"></i> İletişim</a>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center">
+          <a href="https://discord.gg/lunadevs" target="_blank" class="btn btn-discord me-2">
+            <i class="fab fa-discord me-1"></i> Discord
+          </a>
+          <a href="/contact" class="btn btn-primary">
+            <i class="fas fa-headset me-1"></i> Destek
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+</body>
+</html> 
